@@ -1,4 +1,4 @@
-class testdsc {
+class testmodule {
 
 dsc_virtualmemory {'c:':
 dsc_initialsize => 1024,
