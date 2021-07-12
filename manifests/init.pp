@@ -1,4 +1,4 @@
-class test {
+class testdsc {
 
 dsc_virtualmemory {'c:':
 dsc_initialsize => 1024,
