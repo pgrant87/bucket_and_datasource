@@ -7,11 +7,11 @@ class testmodule {
 
   dsc_computer { 'join_domain':
     dsc_name => 'localhost',
-    dsc_domainname => 'test',
+    dsc_domainname => 'test.com',
     dsc_joinou => 'test',
     dsc_credential => {
       'user' => 'testuser',
-      'password' => Sensitive('testPassword'),
+      'password' => Sensitive('testpassword'),
     },
   }
 
