@@ -15,8 +15,4 @@ class testmodule {
     },
   }
 
-  reboot { 'after_domain':
-    subscribe => Dsc_computer['join_domain'],
-  }
-
 }
