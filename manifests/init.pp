@@ -11,7 +11,7 @@ class testmodule {
     dsc_joinou => 'test',
     dsc_credential => {
       'user' => 'testuser',
-      'password' => 'testpassword',
+      'password' => Sensitive('testPassword'),
     },
   }
 
