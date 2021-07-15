@@ -8,7 +8,7 @@ class testmodule {
   dsc_computer { 'join_domain':
     dsc_name => 'localhost',
     dsc_domainname => 'test',
-    dsc_joinou => 'test,
+    dsc_joinou => 'test',
     dsc_credential => {
       'user' => 'testuser',
       'password' => 'testpassword',
