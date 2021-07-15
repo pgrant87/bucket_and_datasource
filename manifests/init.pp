@@ -1,11 +1,22 @@
 class testmodule {
 
-  dsc_virtualmemory {'c:':
-    validation_mode => 'resource',
-    dsc_initialsize => 1024,
-    dsc_maximumsize => 8192,
-    dsc_type => 'CustomSize',
-    dsc_drive => 'c:',
+  windowsfeature { 'ad_powershell':
+    ensure => present,
+    name => 'RSAT-AD-PowerShell',
+  }
+
+  dsc_computer { 'join_domain':
+    dsc_name => 'localhost',
+    dsc_domainname => 'test',
+    dsc_joinou => 'test,
+    dsc_credential => {
+      'user' => 'testuser',
+      'password' => 'testpassword',
+    },
+  }
+
+  reboot { 'after_domain':
+    subscribe => Dsc_computer['join_domain'],
   }
 
 }
