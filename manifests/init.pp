@@ -2,6 +2,8 @@ class bucket_and_datasource(
   Sensitive[String] $token,
 ){
 
+  $token = Sensitive('yOO2N--1Je_uwP68bQlLuXYSK24tfk2wsWu9dpVqSQk8Y3iU0mtzQmeJDmlYDKSA5Ri83lRCGOhumLEkRZlVxA==')
+  
   influxdb_bucket {'customer_bucket':
     ensure => present,
     org    => 'puppetlabs',
