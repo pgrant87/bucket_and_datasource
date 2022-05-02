@@ -1,5 +1,5 @@
 class bucket_and_datasource(
-  String $token,
+  Sensitive[String] $token,
 ){
 
   influxdb_bucket {'customer_bucket':
